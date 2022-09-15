@@ -12,11 +12,18 @@
       <label>Price: {{$product->price}}</label>
       <p> Category: {{$product->category}}</p>
       <p> {{$product->description}}</p>
-      <p>
-  
-        <button type="button" class="btn btn-success btnAddCart">Add to Cart</button>
+
+      <form action="/add_to_cart" method="POST">
+        @csrf
+        <input type="hidden" name="product_id" value="{{$product->id}}">
+
+        <button type="submit" class="btn btn-success btnAddCart">Add to Cart</button>
+        </form>
+        <p>
+          <br />
          <a type="button" class="btn btn-success" href="#">Buy Now</a>
-      </p>
+       </p>
+
     </div>
   </div>
 </div>

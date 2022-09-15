@@ -34,3 +34,9 @@ php artisan make:seeder ProductSeeder
 php artisan db:seed --class ProductSeeder
 
 php artisan make:model Product
+
+CART: ;
+php artisan make:migration create_cart_table
+php artisan migrate
+
+php artisan make:model Cart
