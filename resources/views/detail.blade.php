@@ -12,6 +12,11 @@
       <label>Price: {{$product->price}}</label>
       <p> Category: {{$product->category}}</p>
       <p> {{$product->description}}</p>
+      <p>
+  
+        <button type="button" class="btn btn-success btnAddCart">Add to Cart</button>
+         <a type="button" class="btn btn-success" href="#">Buy Now</a>
+      </p>
     </div>
   </div>
 </div>
