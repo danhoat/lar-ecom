@@ -1,0 +1,36 @@
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+php artisan make:migration create_users_table
+php artisan migrate
+
+php artisan make:seeder UserSeeder
+
+php artisan db:seed --class Userseeder
+
+php artisan make:controller UserController
+php artisan make:controller ProductController
+
+https://www.youtube.com/watch?v=6R5hMKAW7n4
+
+@csrf
+
+php artisan make:middleware UserAuth
+
+php artisan make:migration create_products_table
+php artisan migrate
+php artisan make:seeder ProductSeeder
+php artisan db:seed --class ProductSeeder
+
+php artisan make:model Product
