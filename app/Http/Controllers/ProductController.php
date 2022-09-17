@@ -81,9 +81,11 @@ class ProductController extends Controller
     }
     function listProducts(){
         //return 'list Products';
-        $products = Product::all();
+        //$products = Product::all();
         // DB::table('users')->paginate(15)
-        return view('products',['products' => $products]);
+        $products = Product::paginate(3);
+ 
+         return view('products',['products' => $products]);
     }
     function listProductsPaginate($currentPage){
 
@@ -95,6 +97,7 @@ class ProductController extends Controller
         //paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
 
         $products = Product::paginate($numberItemPerpage);
+        $products = Product::paginate(5);
         return view('products',['products' => $products]);
 
     }

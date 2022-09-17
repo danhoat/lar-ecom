@@ -42,3 +42,6 @@ php artisan make:migration create_cart_table
 php artisan migrate
 
 php artisan make:model Cart
+
+Paginate: https://www.positronx.io/laravel-pagination-example-with-bootstrap-tutorial/
+
