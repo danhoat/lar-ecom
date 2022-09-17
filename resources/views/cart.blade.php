@@ -23,7 +23,7 @@
                 <td>{{$item->price}} </td>
                 </tr>
             @endforeach
-            <tr> <td colspan="3">Total:</td>
+            <tr> <td colspan="3" class="justify-content-end float-end text-right"><strong>Total:</strong></td>
                 <td><?php echo $total;?></td>
             </tr>
          </table>

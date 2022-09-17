@@ -73,7 +73,7 @@
 			margin-left: 100px;
 		}
 		.cart img{
-			max-width: 80px;
+			max-width: 50px;
 		}
 	</style>
 </head>
