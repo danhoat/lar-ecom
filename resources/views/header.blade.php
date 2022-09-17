@@ -25,14 +25,23 @@ if( $user ){
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Products</a>
       </li>
-
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
+       <li class="nav-item">
+        <a class="nav-link" href="#">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Custom Link</a>
+      </li>
+      <li class="searchForm">
+        <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+  </li>
+
+    </ul>
+
 
   </div>
    <ul class="nav navbar-nav navbar-right">

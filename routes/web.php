@@ -32,7 +32,7 @@ Route::get('/login', function () {
 Route::post('/login', [UserController::class,'login']);
 Route::get('/logout',function(){
     Session::forget('user');
-     Auth::logout();
+    Auth::logout();
     return redirect('login');
 });
 

@@ -57,10 +57,10 @@
 
 		}
 		#login-row{
-			min-height: 500px;
+			min-height: 550px;
 		}
 		footer{
-			padding: 35px 0;
+			padding: 25px 0;
 			margin: 0 auto;
 			border-top: 1px solid #ccc;
 			margin-top: 30px;
@@ -68,6 +68,9 @@
 		}
 		.main{
 			min-height: 550px;
+		}
+		.searchForm{
+			margin-left: 100px;
 		}
 	</style>
 </head>
