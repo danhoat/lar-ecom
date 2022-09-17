@@ -3,7 +3,7 @@
 
  <div id="login-row" class="row justify-content-center align-items-center">
         <div id="login-column" class="col-md-6">
-            <div id="login-box" class="col-md-12">
+            <div id="login-box" class="login-box">
                 <form id="login-form" class="form" action="/login" method="POST">
 
                 	@csrf

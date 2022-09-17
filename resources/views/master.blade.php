@@ -30,8 +30,9 @@
 	</script>
 	<style type="text/css">
 		.carousel-item img{
-			max-width: 650px;
+			max-width: 350px;
 			width: auto;
+			height: auto;
 		}
 		img{
 			max-width: 100%;
@@ -41,6 +42,25 @@
 			padding: 30px 0 50x 0;
 			min-height: 450px;
 			margin-top: 50px;
+		}
+		.bd-example{
+			background-color: #ccc;
+			margin: 20px 0;
+		}
+		.login-box{
+			max-width: 450px;
+			border: 1px solid #ccc;
+			margin:  0 auto;
+			border-radius: 5px;
+			padding: 25px;
+			margin-top: 50px;
+		}
+		footer{
+			padding: 35px 0;
+			margin: 0 auto;
+			border-top: 1px solid #ccc;
+			margin-top: 30px;
+			 background-color: #f8f9fa!important;
 		}
 	</style>
 </head>

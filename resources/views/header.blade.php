@@ -2,6 +2,14 @@
 use App\Http\Controllers\ProductController;
 $total = ProductController::cartItem();
 
+
+$user       = session()->get('user');
+$isLogged   = false;
+if( $user ){
+  $name =$user['name'];
+  $isLogged = true;
+}
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,10 +27,7 @@ $total = ProductController::cartItem();
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
       </li>
-     
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -31,18 +36,25 @@ $total = ProductController::cartItem();
 
   </div>
    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">cart(<?php echo $total;?>)</a></li>
+
+      <?php if($isLogged){ ?>
+         <li><a href="#">cart(<?php echo $total;?>)</a></li>
        <li class="nav-item dropdown">
+
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          <?php echo $name; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/logout">Logout</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="/logout">ABc Check</a>
+
         </div>
       </li>
+    <?php }  else { ?>
+       <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+    <?php } ?>
      </ul>
 </div>
 
