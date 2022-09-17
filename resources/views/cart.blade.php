@@ -20,11 +20,11 @@
 
                 <td>{{$item->name}}</td>
                 <td><img src="{{$item->gallery}}" /></td>
-                <td>{{$item->price}} </td>
+                <td>{{number_format($item->price, 0, ',', '.')}} </td>
                 </tr>
             @endforeach
             <tr> <td colspan="3" class="justify-content-end float-end text-right"><strong>Total:</strong></td>
-                <td><?php echo $total;?></td>
+                <td><?php echo number_format($total, 0, ',', '.');?></td>
             </tr>
          </table>
     @endif
