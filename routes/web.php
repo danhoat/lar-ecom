@@ -29,10 +29,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
-// Route::get('/products', function () {
-//     return view('products');
-// });
-
 Route::post('/login', [UserController::class,'login']);
 Route::post('/register', [UserController::class,'register']);
 
@@ -49,5 +45,8 @@ Route::post('add_to_cart', [ProductController::class,'addToCart']);
 Route::get('/cartlist', [ProductController::class,'cartList']);
 
 Route::get("removecart/{id}",[ProductController::class,'removeCart']);
+
+Route::get("/products",[ProductController::class,'listProducts']);
+Route::get("products/{id}",[ProductController::class,'listProductsPaginate']);
 
 

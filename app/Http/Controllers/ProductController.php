@@ -79,5 +79,24 @@ class ProductController extends Controller
         return redirect('/cartlist');
 
     }
+    function listProducts(){
+        //return 'list Products';
+        $products = Product::all();
+        // DB::table('users')->paginate(15)
+        return view('products',['products' => $products]);
+    }
+    function listProductsPaginate($currentPage){
+
+        $numberItemPerpage = 3;
+        echo $currentPage;
+        $perPage = 3;
+       // Articles::getPaginator()->setCurrentPage($page_num);
+       // $products = DB::table('products')->paginate($page_id);
+        //paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
+
+        $products = Product::paginate($numberItemPerpage);
+        return view('products',['products' => $products]);
+
+    }
 }
 ?>
