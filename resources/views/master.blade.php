@@ -75,6 +75,27 @@
 		.cart img{
 			max-width: 50px;
 		}
+		.pagination svg{
+			width: 30px;
+		}
+		.pagination .flex.justify-between{
+			display: ;
+		}
+		.pagination li {
+			padding: 0px;
+			border: 1px solid #ccc;
+			border-right: 0;
+		}
+		.pagination li a,
+		.pagination li span{
+			padding: 8px 15px;
+			text-decoration: none;
+			min-height: 15px;
+			display: block;
+		}
+		.pagination li:last-child{
+			border-right: 1px solid #ccc;
+		}
 	</style>
 </head>
 <body>
