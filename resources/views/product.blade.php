@@ -14,13 +14,18 @@
         @foreach($products as $key=>$item)
 
 
-              <div class="carousel-item @if($key == 0)) active @endif">
-                <img src="{{$item->gallery}}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <a href="detail/{{$item->id}}/">
-                        <h5> {{$item->name}}</h5>
-                        <p> {{$item->description}} </p>
-                    </a>
+              <div class="carousel-item @if($key == 0) active @endif row">
+                <div class="col">
+                  <img src="{{$item->gallery}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col">
+                  <div class="carousel-caption">
+                      <a href="detail/{{$item->id}}/">
+
+                          <h5> {{$item->name}}</h5>
+                          <p> {{$item->description}} </p>
+                      </a>
+                  </div>
                 </div>
               </div>
         @endforeach
