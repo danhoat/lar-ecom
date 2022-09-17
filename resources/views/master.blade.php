@@ -54,6 +54,10 @@
 			border-radius: 5px;
 			padding: 25px;
 			margin-top: 50px;
+
+		}
+		#login-row{
+			min-height: 500px;
 		}
 		footer{
 			padding: 35px 0;
@@ -61,6 +65,9 @@
 			border-top: 1px solid #ccc;
 			margin-top: 30px;
 			 background-color: #f8f9fa!important;
+		}
+		.main{
+			min-height: 550px;
 		}
 	</style>
 </head>

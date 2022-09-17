@@ -1,7 +1,7 @@
 
 @extends('master')
 @section('content')
-<div class="container">
+<div class="container main">
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -18,7 +18,7 @@
                 <img src="{{$item->gallery}}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <a href="detail/{{$item->id}}/">
-                        <h5> {{$item->name}}111</h5>
+                        <h5> {{$item->name}}</h5>
                         <p> {{$item->description}} </p>
                     </a>
                 </div>
