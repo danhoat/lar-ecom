@@ -52,7 +52,5 @@
 
 		{{View::make('footer')}}
 
-
-
 </body>
 </html>
