@@ -57,5 +57,20 @@ class ProductController extends Controller
         return 0;
 
     }
+    function cartList(){
+
+        $user = session()->get('user');
+        $cart = array();
+        if($user){
+            $user_id    = $user['id'];
+            $products = DB::table('cart')->join('products','cart.product_id','=','products.id')
+            ->where('cart.user_id',$user_id)
+            ->select('products.*')
+            ->get();
+           // $cart       =  Cart::where('user_id', $user_id);
+        }
+
+        return view('cart', ['products' => $products]);
+    }
 }
 ?>

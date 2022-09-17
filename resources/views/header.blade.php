@@ -45,10 +45,9 @@ if( $user ){
 
   </div>
    <ul class="nav navbar-nav navbar-right">
-
       <?php if($isLogged){ ?>
          <li class="nav-item ">
-          <a class="nav-link " href="#">cart(<?php echo $total;?>)</a>
+          <a class="nav-link " href="/cartlist">cart(<?php echo $total;?>)</a>
         </li>
        <li class="nav-item dropdown">
 

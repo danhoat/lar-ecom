@@ -72,6 +72,9 @@
 		.searchForm{
 			margin-left: 100px;
 		}
+		.cart img{
+			max-width: 80px;
+		}
 	</style>
 </head>
 <body>
