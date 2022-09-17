@@ -43,7 +43,7 @@ class ProductController extends Controller
             $cart->product_id   = $req->product_id;
             $cart->number_item  = 1;
             $cart->save();
-            return redirect('/');
+            return redirect('/cartlist');
         }
         return redirect('/login');
 
@@ -65,12 +65,19 @@ class ProductController extends Controller
             $user_id    = $user['id'];
             $products = DB::table('cart')->join('products','cart.product_id','=','products.id')
             ->where('cart.user_id',$user_id)
-            ->select('products.*')
+            ->select('products.*','cart.id as cart_id')
             ->get();
            // $cart       =  Cart::where('user_id', $user_id);
         }
 
         return view('cart', ['products' => $products]);
+    }
+    static function removeCart($id){
+
+        //return 'check '.$id;
+        Cart::destroy($id);
+        return redirect('/cartlist');
+
     }
 }
 ?>
