@@ -40,7 +40,7 @@
 		}
 		.wrap-detail{
 			padding: 30px 0 50x 0;
-			min-height: 450px;
+			min-height: 500px;
 			margin-top: 50px;
 		}
 		.bd-example{
