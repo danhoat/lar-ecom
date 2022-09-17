@@ -9,7 +9,7 @@
                 	@csrf
                     <h3 class="text-center text-info">Login</h3>
                     <div class="form-group">
-                        <label for="email" class="text-info">Email</label><br>
+                        <label for="email" class="text-info">Email or Username</label><br>
                         <input type="text"  name="email" id="email" class="form-control">
                     </div>
                     <div class="form-group">

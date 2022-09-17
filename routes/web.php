@@ -25,11 +25,17 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/register', function () {
+    return view('register');
+});
+
 // Route::get('/products', function () {
 //     return view('products');
 // });
 
 Route::post('/login', [UserController::class,'login']);
+Route::post('/register', [UserController::class,'register']);
+
 Route::get('/logout',function(){
     Session::forget('user');
     Auth::logout();
