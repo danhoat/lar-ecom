@@ -25,7 +25,7 @@
 		(function($){
 
          jQuery(document).ready(function(){
-            jQuery('#myForm').submit(function(e){
+            jQuery('#loginAjax').submit(function(e){
                e.preventDefault();
                var token = $('meta[name="csrf-token"]').attr('content');
                $.ajaxSetup({
@@ -38,24 +38,19 @@
                   method: 'POST',
                   data: {
                   	_token: token,
-                     name: jQuery('#name').val(),
-                     type: jQuery('#type').val(),
-                     price: jQuery('#price').val()
+                     email: jQuery('#email').val(),
+                     password: jQuery('#password').val(),
                   },
                   fail: function() {
 					        alert("error");
 					    },
 
                   success: function(result){
-                     console.log(result);
                      var msg = result.msg;
-                     if(result.success){
-                     	//alert(msg);
-                  	} else {
-                  		//alert(msg);
-                  	}
                   	$(".alert").html(msg);
                   	$(".alert").show();
+                  	if( result.success)
+                  		location.reload();
                   }});
                });
             });

@@ -58,8 +58,23 @@ class UserController extends Controller
         $req->session()->put('user',$user);
         return redirect('/');
 
+    }
+    function loginAjax(Request $req){
+        $email  = $req->email;
+        $user   = false;
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+           $user =  User::where(['email'=> $email])->first();
+        } else {
+          $user = User::where(['name'=> $email])->first();
+        }
 
+        if( !$user || !Hash::check($req->password, $user->password )){
+            $msg =  'Password incorrect. email = '.$email.'pw:'.$req->password;
+             return response()->json(['success'=> false, 'msg' => $msg]);
+        }
+        $req->session()->put('user',$user);
 
+        return response()->json(['success'=> true, 'msg' => 'Login successfully']);
     }
 
 }

@@ -131,19 +131,12 @@ class ProductController extends Controller
 
     }
     function ajaxPage(){
-
+        $user = session()->get('user');
+        if($user){
+            return redirect('/');
+        }
         return view('ajaxform');
     }
-    function processAjax(){
-        $number = rand(1,9);
-        $result = false;
-        $msg = 'Process failed.';
 
-        if ($number % 2 == 0){
-            $result = true;
-            $msg = 'Process successfully';
-        }
-        return response()->json(['success'=> $result, 'msg' => $msg]);
-    }
 }
 ?>
