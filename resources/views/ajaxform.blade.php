@@ -16,7 +16,12 @@
                     <label for="password" class="text-info">Password:</label><br>
                     <input type="text" name="password" id="password" class="form-control" required>
                 </div>
-                 <div class="form-group alert alert-success" style="display:none;"></div>
+                 <div class="form-group alert alert-success" style="display:none;">
+
+                  <div class="message"></div>
+                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Redirect to home page.
+                 </div>
                 <div class="form-group text-right">
                     <button  class="btn-info btn-md btn-default btn btn-success" type="submit"> Login</button>
                 </div>

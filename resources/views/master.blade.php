@@ -32,7 +32,7 @@
                  headers: {
 					        'X-CSRF-TOKEN': token
 					    }
-              });
+              	});
                jQuery.ajax({
                   url: "{{ url('/processajax') }}",
                   method: 'POST',
@@ -47,11 +47,19 @@
 
                   success: function(result){
                      var msg = result.msg;
-                  	$(".alert").html(msg);
+                  	$(".message").html(msg);
                   	$(".alert").show();
-                  	if( result.success)
-                  		location.reload();
-                  }});
+                  	if( result.success){
+
+						        setTimeout(function() {
+						            //window.location = "your link";
+						            location.reload();
+						        }, 5000);
+						    }
+
+                  }
+               });
+
                });
             });
 		})(jQuery);
