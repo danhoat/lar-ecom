@@ -49,4 +49,10 @@ Route::get("removecart/{id}",[ProductController::class,'removeCart']);
 Route::get("/products",[ProductController::class,'listProducts']);
 Route::get("products/{id}",[ProductController::class,'listProductsPaginate']);
 
+//Route::get("/search",[ProductController::class,'search']);
+Route::get("/search",'SearchController@index');
+Route::get("/ajaxform",[ProductController::class,'ajaxPage']);
+Route::post("/processajax",[ProductController::class,'processAjax']);
+//Route::post('/grocery/post', 'GroceryController@store');
+
 

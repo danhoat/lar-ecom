@@ -33,9 +33,38 @@ class ProductController extends Controller
         return view('detail',['product'=> $product]);
 
     }
-    function search(){
+
+     function search(){
+
+
+        $keyword = '%'.$_GET['keyword'].'%';
+        //$products = Product::where('name', 'like', $keyword)->get();
+        //$products = Product::where('name', 'like', $keyword);
+
+        $perPage = 6;
+        $products = DB::table('products')
+                ->where('name', 'like', $keyword)
+                ->paginate($perPage);
+
+
+        // $search =  $request->input('keyword');
+        // if($search!=""){
+        //     $products = Product::where(function ($query) use ($search){
+        //         $query->where('name', 'like', '%'.$search.'%')
+
+        //     })->paginate(2);
+        //     $products->appends(['q' => $search]);
+        // }
+        // else{
+        //     $products = Product::paginate(2);
+        // }
+        //return View('pages.search')->with('data',$users);
+
+        return view('search',['products'=> $products]);
 
     }
+
+
     function addToCart(Request $req){
         if( $req->session()->has('user') ){
             $cart = new Cart;
@@ -83,23 +112,38 @@ class ProductController extends Controller
         //return 'list Products';
         //$products = Product::all();
         // DB::table('users')->paginate(15)
-        $products = Product::paginate(3);
- 
+        $numberItemPerpage = 6;
+        $products = Product::paginate($numberItemPerpage);
+
          return view('products',['products' => $products]);
     }
     function listProductsPaginate($currentPage){
 
-        $numberItemPerpage = 3;
-        echo $currentPage;
-        $perPage = 3;
+
+
        // Articles::getPaginator()->setCurrentPage($page_num);
        // $products = DB::table('products')->paginate($page_id);
         //paginate($perPage = null, $columns = ['*'], $pageName = 'page', $page = null)
 
         $products = Product::paginate($numberItemPerpage);
-        $products = Product::paginate(5);
+
         return view('products',['products' => $products]);
 
+    }
+    function ajaxPage(){
+
+        return view('ajaxform');
+    }
+    function processAjax(){
+        $number = rand(1,9);
+        $result = false;
+        $msg = 'Process failed.';
+
+        if ($number % 2 == 0){
+            $result = true;
+            $msg = 'Process successfully';
+        }
+        return response()->json(['success'=> $result, 'msg' => $msg]);
     }
 }
 ?>

@@ -20,8 +20,8 @@
                 <tr> <?php $total = $total + $item->price;?>
                  <th scope="row">{{++$key}}</th>
 
-                <td>{{$item->name}}</td>
-                <td><img src="{{$item->gallery}}" /></td>
+                <td> <a href="detail/{{$item->id}}">{{$item->name}}</a></td>
+                <td> <a href="detail/{{$item->id}}"><img src="{{$item->gallery}}" /></a></td>
                 <td>{{number_format($item->price, 0, ',', '.')}} </td>
                 <td> <a href="/removecart/{{$item->cart_id}}">Remove</a></td>
                 </tr>
