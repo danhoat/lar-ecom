@@ -14,13 +14,12 @@
                 </div>
                 <div class="form-group">
                     <label for="password" class="text-info">Password:</label><br>
-                    <input type="text" name="password" id="password" class="form-control" required>
+                    <input type="password" name="password" id="password" class="form-control" required>
                 </div>
-                 <div class="form-group alert alert-success" style="display:none;">
+                 <div class="form-group alert " style="display:none;">
 
-                  <div class="message"></div>
-                  <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                    Redirect to home page.
+                    <span class="redirecting spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                      <div class="message"></div>
                  </div>
                 <div class="form-group text-right">
                     <button  class="btn-info btn-md btn-default btn btn-success" type="submit"> Login</button>

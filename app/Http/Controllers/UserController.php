@@ -69,12 +69,12 @@ class UserController extends Controller
         }
 
         if( !$user || !Hash::check($req->password, $user->password )){
-            $msg =  'Password incorrect. email = '.$email.'pw:'.$req->password;
+            $msg =  'Login fail.';
              return response()->json(['success'=> false, 'msg' => $msg]);
         }
         $req->session()->put('user',$user);
 
-        return response()->json(['success'=> true, 'msg' => 'Login successfully']);
+        return response()->json(['success'=> true, 'msg' => 'Login successfully. Redirect to home page.']);
     }
 
 }

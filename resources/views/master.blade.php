@@ -5,6 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title> Laravel App Project</title>
+	<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	<link href="{{ url('css/main.css') }}" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="{{asset('css/main.css')}}">
+
+
 
 
 
@@ -50,11 +56,14 @@
                   	$(".message").html(msg);
                   	$(".alert").show();
                   	if( result.success){
-
+                  		$(".message").addClass("alert-success");
+                  		$(".redirecting").show();
 						        setTimeout(function() {
-						            //window.location = "your link";
 						            location.reload();
 						        }, 5000);
+						    } else{
+						    	$(".message").addClass("alert-fail");
+						    	$(".redirecting").hide();
 						    }
 
                   }
@@ -101,7 +110,7 @@
 			margin: 0 auto;
 			border-top: 1px solid #ccc;
 			margin-top: 30px;
-			 background-color: #f8f9fa!important;
+			background-color: #f8f9fa!important;
 		}
 		.main{
 			min-height: 550px;
