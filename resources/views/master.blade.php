@@ -60,7 +60,7 @@
                   		$(".redirecting").show();
 						        setTimeout(function() {
 						            location.reload();
-						        }, 5000);
+						        }, 2500);
 						    } else{
 						    	$(".message").addClass("alert-fail");
 						    	$(".redirecting").hide();
