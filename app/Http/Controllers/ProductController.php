@@ -24,6 +24,7 @@ class ProductController extends Controller
        // return Product::all();
         //return $html;
         $data = Product::all();
+
         return view('product', ['products' => $data]);
     }
     function detail($id){

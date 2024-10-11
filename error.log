@@ -1,0 +1,20 @@
+lỗi 1:
+
+run this:
+php artisan db:seed 
+
+seed k tự insert data.
+
+Run this:
+php artisan migrate:fresh --seed --seeder=UserSeeder
+có tạo db thành công nhưng chỉ insert vào bảng user
+
+Clear cache:
+php artisan cache:clear 
+
+
+Chạy từng cái 1:
+
+php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=ProductSeeder
+
