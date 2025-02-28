@@ -3,6 +3,8 @@ lỗi 1:
 run this:
 php artisan db:seed 
 
+php artisan serve --port=8002
+
 seed k tự insert data.
 
 Run this:
