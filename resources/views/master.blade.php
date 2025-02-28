@@ -122,13 +122,18 @@
 			border: px solid #ccc;
 			margin-bottom: 10px;
 			background-color: #fff;
+			overflow: hidden;
+			height: 330px;
 		}
 		.product-item{
 			display: block;
 			min-height: 288px;
 		}
 		.product-item img{
-			max-width: 130px;
+			height: auto;
+			width: auto;
+			max-width: 100%;
+			max-height: 222px;
 		}
 		.product-item h3{
 			font-size: 18px;
@@ -138,6 +143,8 @@
 		}
 		.product-item a{
 			text-decoration: none;
+			height: 100%;
+			overflow: hidden;
 		}
 		.cart img{
 			max-width: 50px;

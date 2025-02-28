@@ -30,9 +30,7 @@ if( $user ){
        <li class="nav-item">
         <a class="nav-link" href="#">Orders</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/ajaxform">Ajax Form</a>
-      </li>
+      
 
        <li class="nav-item dropdown">
 
@@ -78,6 +76,9 @@ if( $user ){
     <?php }  else { ?>
        <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/ajaxform">Ajax Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/register">Register</a>

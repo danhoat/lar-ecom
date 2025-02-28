@@ -21,8 +21,15 @@ class Userseeder extends Seeder
         DB::table('users')->insert([
             'name'      => 'abc',
             'email'     => 'abc@gmail.com',
-            'password'  => Hash::make('12345'),
+            'password'  => Hash::make('abc'),
         ]);
+
+        DB::table('users')->insert([
+            'name'      => 'admin',
+            'email'     => 'admin@gmail.com',
+            'password'  => Hash::make('admin'),
+        ]);
+
         // DB::table('users')->insert([
         //     'name'      => 'WordPress',
         //     'email'     => 'wpcodev@gmail.com',

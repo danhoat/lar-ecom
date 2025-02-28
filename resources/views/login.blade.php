@@ -21,7 +21,17 @@
                 </div>
 
             </form>
+
         </div>
+
+
+        <div class="alert login-box" role="alert">
+            <h4 class="alert-heading">Account Demo!</h4>
+
+           admin/admin <br />
+            abc/abc
+        </div>
+
     </div>
 </div>
 
